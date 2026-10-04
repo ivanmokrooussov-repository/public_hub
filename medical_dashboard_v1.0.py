@@ -11,7 +11,7 @@ import io
 import zipfile
 from datetime import datetime, timedelta
 
-#import plotly.express as px
+import plotly.express as px
 import plotly.graph_objects as go
 import yaml
 from yaml.loader import SafeLoader
