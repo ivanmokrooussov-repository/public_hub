@@ -11,14 +11,6 @@ import io
 import zipfile
 from datetime import datetime, timedelta
 
-import plotly.express as px
-import plotly.graph_objects as go
-import yaml
-from yaml.loader import SafeLoader
-from pathlib import Path
-
-import streamlit_authenticator as stauth
-
 from sklearn.model_selection import GroupKFold
 from sklearn.metrics import (
     accuracy_score, f1_score, roc_auc_score, mean_squared_error,
