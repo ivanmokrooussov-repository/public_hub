@@ -11,11 +11,6 @@ import io
 import zipfile
 from datetime import datetime, timedelta
 
-from sklearn.model_selection import GroupKFold
-from sklearn.metrics import (
-    accuracy_score, f1_score, roc_auc_score, mean_squared_error,
-    precision_score, recall_score, confusion_matrix, brier_score_loss,
-)
 from sklearn.preprocessing import LabelEncoder
 from sklearn.calibration import calibration_curve, IsotonicRegression
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
