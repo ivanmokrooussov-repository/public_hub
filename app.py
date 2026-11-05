@@ -186,7 +186,7 @@ with st.sidebar:
     st.markdown("---")
     data_mode = st.radio("Data source", ["demo", "upload"], horizontal=True)
     st.session_state.data_mode = data_mode
-    label_col = st.selectbox("Primary label", OUTCOME_CANDIDATES, index=0)
+
     model_choices = ["rf"] + (["xgb"] if HAS_XGB else [])
     model_type = st.radio("Model", model_choices, format_func=lambda x: "Random Forest" if x == "rf" else "XGBoost", horizontal=True)
     imbalance_mode = st.selectbox(
