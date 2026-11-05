@@ -49,16 +49,7 @@ try:
 except Exception:
     HAS_PLOTLY = False
 
-import sklearn
-from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
-from sklearn.model_selection import GroupKFold
-from sklearn.preprocessing import LabelEncoder
-from sklearn.impute import SimpleImputer
-from sklearn.metrics import (
-    accuracy_score, f1_score, roc_auc_score, mean_squared_error, brier_score_loss,
-)
-from sklearn.calibration import calibration_curve
-from sklearn.isotonic import IsotonicRegression
+
 
 st.set_page_config(
     page_title="MH Multimodal Studio",
