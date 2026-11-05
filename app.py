@@ -257,14 +257,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-pills = [
-    f'<span class="pill {"pill-ok" if st.session_state.daily_df is not None else "pill-off"}">Data</span>',
-    f'<span class="pill {"pill-ok" if st.session_state.pipeline_result is not None else "pill-off"}">Pipeline</span>',
-    f'<span class="pill {"pill-ok" if st.session_state.model is not None else "pill-off"}">Model</span>',
-    f'<span class="pill {"pill-ok" if st.session_state.study is not None else "pill-off"}">Optuna</span>',
-    f'<span class="pill {"pill-ok" if st.session_state.shap_values is not None else "pill-off"}">SHAP</span>',
-    f'<span class="pill {"pill-ok" if st.session_state.ablation_df is not None else "pill-off"}">Ablation</span>',
-]
+
 st.markdown(" ".join(pills), unsafe_allow_html=True)
 
 tabs = st.tabs([
