@@ -49,6 +49,7 @@ try:
 except Exception:
     HAS_PLOTLY = False
 
+import sklearn
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn.model_selection import GroupKFold
 from sklearn.preprocessing import LabelEncoder
