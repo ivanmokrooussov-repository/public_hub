@@ -258,8 +258,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-st.markdown(" ".join(pills), unsafe_allow_html=True)
-
 tabs = st.tabs([
     "Overview", "Data panel",
 ])
