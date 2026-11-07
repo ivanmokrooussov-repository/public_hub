@@ -265,12 +265,7 @@ tabs = st.tabs([
 # ===== Overview =====
 with tabs[0]:
     st.markdown('<div class="section-title">Studio overview</div>', unsafe_allow_html=True)
-    c1, c2, c3 = st.columns(3)
-    with c1:
-        st.markdown("**Stages**\n1. Load demo/uploads\n2. Align + engineer\n3. Window tokenize\n4. Export / GroupKFold\n5. RF or XGBoost\n6. Optuna · SHAP · calibration")
-    with c2:
-        st.markdown("**Modalities**\nActivity · vitals · sleep · behavior · weather\nLabs · weight · meds (as-of)\nEEG trials · audio clips")
-    with c3:
+
 
 # ===== Data panel =====
 with tabs[1]:
@@ -293,7 +288,4 @@ with tabs[2]:
         "plus diagrams, procedures, and glossaries — same depth as the subject-level metrics notes."
     )
 
-    gtab1, gtab2, gtab3, gtab4, gtab5 = st.tabs([
-        "Diagrams", "Full manual", "Procedures", "Glossaries", "Decisions",
-    ])
 
