@@ -262,13 +262,6 @@ tabs = st.tabs([
     "Overview", "Data panel", "Guide",
 ])
 
-tabs = st.tabs([
-    "Overview", "Data panel", "Workflows", "Run pipeline", "Results", "Ablation", "EEG / Audio",
-    "Optuna", "Calibration", "SHAP", "Interactions", "Playground",
-    "Dataset cards", "Tokenizers", "Stimuli / trials", "FM Probe",
-    "Foundation Model", "Export", "Guide", "Settings",
-])
-
 # ===== Overview =====
 with tabs[0]:
     st.markdown('<div class="section-title">Studio overview</div>', unsafe_allow_html=True)
