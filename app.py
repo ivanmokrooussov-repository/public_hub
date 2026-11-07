@@ -262,30 +262,3 @@ tabs = st.tabs([
     "Overview", "Data panel", "Guide",
 ])
 
-# ===== Overview =====
-with tabs[0]:
-    st.markdown('<div class="section-title">Studio overview</div>', unsafe_allow_html=True)
-
-
-# ===== Data panel =====
-with tabs[1]:
-    st.markdown('<div class="section-title">Data contract · multi-file loaders · QC</div>', unsafe_allow_html=True)
-    st.caption(
-        "Core clinical/behavioral: surveys (PHQ/GAD/energy/pain/substance), activity, sleep, vitals (HR/HRV/BP), labs, notes.\n\n"
-        "Neuroscience: EEG/MEG/fNIRS continuous + events → daily neuro features mergeable into canonical panel + FM fusion.\n\n"
-        "Surveys + activity + labs + notes (and optional vitals/sleep/…) → validated column maps → "
-        "**canonical panel** (`subject_id` × `date`). All train / FM / merge tabs read this single panel."
-    )
-
-# ===== Guide =====
-with tabs[2]:
-    st.markdown(
-        '<div class="section-title">Studio guide · methods · diagrams</div>',
-        unsafe_allow_html=True,
-    )
-    st.caption(
-        "Full application manual (token contract, subject-level metrics, SHAP, FM, artifacts) "
-        "plus diagrams, procedures, and glossaries — same depth as the subject-level metrics notes."
-    )
-
-
