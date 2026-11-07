@@ -259,5 +259,34 @@ st.markdown("""
 
 
 tabs = st.tabs([
-    "Overview", "Data panel",
+    "Overview", "Data panel", "Guide",
 ])
+
+tabs = st.tabs([
+    "Overview", "Data panel", "Workflows", "Run pipeline", "Results", "Ablation", "EEG / Audio",
+    "Optuna", "Calibration", "SHAP", "Interactions", "Playground",
+    "Dataset cards", "Tokenizers", "Stimuli / trials", "FM Probe",
+    "Foundation Model", "Export", "Guide", "Settings",
+])
+
+# ===== Overview =====
+with tabs[0]:
+    st.markdown('<div class="section-title">Studio overview</div>', unsafe_allow_html=True)
+    c1, c2, c3 = st.columns(3)
+    with c1:
+        st.markdown("**Stages**\n1. Load demo/uploads\n2. Align + engineer\n3. Window tokenize\n4. Export / GroupKFold\n5. RF or XGBoost\n6. Optuna · SHAP · calibration")
+    with c2:
+        st.markdown("**Modalities**\nActivity · vitals · sleep · behavior · weather\nLabs · weight · meds (as-of)\nEEG trials · audio clips")
+    with c3:
+        st.markdown(f"**Settings**\n- `{label_col}` · **{model_type.upper()}**\n- Window **{window_size}** · splits **{n_splits}**\n- EEG `{include_eeg}` · Audio `{include_audio}`\n- Data: **{data_mode}**")
+    st.dataframe(pd.DataFrame({"outcome": OUTCOME_CANDIDATES, "selected": [c == label_col for c in OUTCOME_CANDIDATES]}), use_container_width=True, hide_index=True)
+
+# ===== Data panel =====
+with tabs[1]:
+    st.markdown('<div class="section-title">Data contract · multi-file loaders · QC</div>', unsafe_allow_html=True)
+    st.caption(
+        "Core clinical/behavioral: surveys (PHQ/GAD/energy/pain/substance), activity, sleep, vitals (HR/HRV/BP), labs, notes.\n\n"
+        "Neuroscience: EEG/MEG/fNIRS continuous + events → daily neuro features mergeable into canonical panel + FM fusion.\n\n"
+        "Surveys + activity + labs + notes (and optional vitals/sleep/…) → validated column maps → "
+        "**canonical panel** (`subject_id` × `date`). All train / FM / merge tabs read this single panel."
+    )
