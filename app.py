@@ -12,7 +12,8 @@ import streamlit as st
 
 warnings.filterwarnings("ignore")
 
-
+ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT / "src"))
 
 try:
     import xgboost as xgb
