@@ -278,5 +278,5 @@ with tabs[0]:
     with c2:
         st.markdown("**Modalities**\nActivity · vitals · sleep · behavior · weather\nLabs · weight · meds (as-of)\nEEG trials · audio clips")
     with c3:
-        st.markdown(f"**Settings**\n- `{label_col}` · **{model_type.upper()}**\n- Window **{window_size}** · splits **{n_splits}**\n- EEG `{include_eeg}` · Audio `{include_audio}`\n- Data: **{data_mode}**")
+        st.markdown("____")
 
